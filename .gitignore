@@ -1,0 +1,4 @@
+node_modules
+
+# Used for testing the API 
+*.http

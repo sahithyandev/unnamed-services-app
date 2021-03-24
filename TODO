@@ -1,0 +1,13 @@
+- Plan the basic architecture of the app
+- Come up with a good name for the app
+- Design a logo
+
+### Backend
+
+- Find a good database for the app
+- Find a way to manage the "feed" of users
+- Find a way to do CRON
+
+### Frontend
+
+- Design the UI
