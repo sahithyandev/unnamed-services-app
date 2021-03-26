@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "start-api": "npm api/index.js",
+    "start-api": "node api/index.js",
     "generate-service-meta-json": "node service-loader.js",
     "dev-api": "npm run generate-service-meta-json && nodemon api/index.js"
   },

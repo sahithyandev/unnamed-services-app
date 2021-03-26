@@ -7,7 +7,7 @@ const path = require("path")
 const { CONSTANTS } = require("../global")
 
 const RUNTIME_CONSTANTS = {
-	PORT: 3000
+	PORT: process.env.PORT || 3000
 }
 
 const getServiceData = (serviceId = undefined) => {
