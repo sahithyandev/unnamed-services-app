@@ -9,6 +9,6 @@ const cron = require("node-cron")
 const testFile = path.join(__dirname, "cron-test.txt")
 
 cron.schedule("* * * * *", () => {
-	console.log("writiing");
-	fs.writeFileSync(testFile, new Date().toISOString())
+	const s = fs.readFileSync(testFile, "utf-8") + "\n"
+	fs.writeFileSync(testFile, s + new Date().toISOString())
 })

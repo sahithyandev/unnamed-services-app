@@ -57,7 +57,7 @@ app.post("/subscribe/:serviceId", (req, res) => {
 })
 
 app.get("/cron-test", (req, res) => {
-	const s = fs.readFileSync(path.join(__dirname, "../cron-test.txt"))
+	const s = fs.readFileSync(path.join(__dirname, "../cron-test.txt"), "utf-8")
 
 	res.send(s)
 })
