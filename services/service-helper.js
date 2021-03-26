@@ -19,4 +19,9 @@ const loadDataSet = (serviceId) => {
 	)
 }
 
-module.exports = { loadDataSet, isServiceFile }
+const getSubscribers = (serviceId) => {
+	// TODO get subscribers and return them
+	return []
+}
+
+module.exports = { loadDataSet, isServiceFile, getSubscribers }

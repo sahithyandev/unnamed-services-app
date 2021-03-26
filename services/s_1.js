@@ -1,11 +1,13 @@
-const { loadDataSet } = require("./service-helper")
+const serviceHelper = require("./service-helper")
 
 const s_1 = () => {
-	console.log("TEST RUn")
-	// TODO generate the output
+	const dataset = serviceHelper.loadDataSet(this.name)
+	const subscribersArray = serviceHelper.getSubscribers(this.name)
 
-
-	// TODO update the subscribers' feeds
+	for (let subscriber of subscribersArray) {
+		// TODO select a random quote
+		// TODO add it to the subscriber's feed
+	}
 }
 
 s_1.__meta__ = {

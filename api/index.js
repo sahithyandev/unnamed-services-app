@@ -1,6 +1,7 @@
 const app = require("express")()
 // TODO use fs-extra instead
 const fs = require("fs")
+const path = require("path")
 // TODO add "body-parser" 
 
 const { CONSTANTS } = require("../global")
@@ -53,6 +54,12 @@ app.post("/subscribe/:serviceId", (req, res) => {
 
 	// TODO add userId to service's	subscriber's list
 	res.end(req.body)
+})
+
+app.get("/cron-test", (req, res) => {
+	const s = fs.readFileSync(path.join(__dirname, "../cron-test.txt"))
+
+	res.send(s)
 })
 
 app.listen(RUNTIME_CONSTANTS.PORT, () => {

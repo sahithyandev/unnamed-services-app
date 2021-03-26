@@ -1,11 +1,13 @@
 {
   "license": "MIT",
   "scripts": {
+    "start-api": "npm api/index.js",
     "generate-service-meta-json": "node service-loader.js",
     "dev-api": "npm run generate-service-meta-json && nodemon api/index.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-cron": "3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
