@@ -57,6 +57,7 @@ app.post("/subscribe/:serviceId", (req, res) => {
 })
 
 app.get("/cron-test", (req, res) => {
+	res.set("Cache-Control", "no-cache")
 	const s = fs.readFileSync(path.join(__dirname, "../cron-test.txt"), "utf-8")
 
 	res.send(s)
